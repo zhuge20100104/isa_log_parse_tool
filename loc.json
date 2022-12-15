@@ -1,0 +1,3452 @@
+[
+    {
+        "timestamp": "2022-11-22 10:45:07.417",
+        "loc": [
+            41.37322848626234,
+            2.094252644702423
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:06:53.138",
+        "loc": [
+            41.392991670042754,
+            2.1448878872492636
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:34:58.112",
+        "loc": [
+            41.34468783148135,
+            2.0942846674353093
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 14,
+                "value": "SPL70"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:38:46.953",
+        "loc": [
+            41.353833686616525,
+            2.090722497205785
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:45:35.508",
+        "loc": [
+            41.37472999008732,
+            2.0951251396325543
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:05:37.700",
+        "loc": [
+            41.39383587012452,
+            2.14872961824718
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:19:10.137",
+        "loc": [
+            41.364518373776676,
+            2.1350390419364307
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:37:21.308",
+        "loc": [
+            41.35038036468089,
+            2.092164476283788
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 2,
+                "value": "高速和非高速连接的匝道"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 101,
+                "value": 101
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:39:24.559",
+        "loc": [
+            41.35511239384236,
+            2.0899369227224214
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:24:15.999",
+        "loc": [
+            41.35473512970769,
+            2.1222298440863714
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:50:55.796",
+        "loc": [
+            41.375800208976514,
+            2.11733
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 6,
+                "value": "SPL30"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:15:55.436",
+        "loc": [
+            41.370901378960035,
+            2.1436428563386634
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:07:00.390",
+        "loc": [
+            41.39310112092125,
+            2.144507277272192
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:41:30.953",
+        "loc": [
+            41.360782538376675,
+            2.0886034684173342
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 2,
+                "value": "高速和非高速连接的匝道"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 89,
+                "value": 89
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:39:19.368",
+        "loc": [
+            41.3549216753928,
+            2.090054775389577
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:27:49.837",
+        "loc": [
+            41.34852410488213,
+            2.113521373824443
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:09:56.912",
+        "loc": [
+            41.38430992049273,
+            2.14237302010096
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 6,
+                "value": "SPL30"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:22:18.469",
+        "loc": [
+            41.35849591915163,
+            2.127162038163859
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:30:11.711",
+        "loc": [
+            41.3432905547787,
+            2.106571395654235
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:07:43.809",
+        "loc": [
+            41.391205871676405,
+            2.1436460135735285
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:34:21.389",
+        "loc": [
+            41.34320277701629,
+            2.094898565891679
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 14,
+                "value": "SPL70"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 1,
+                "value": "高速和高速连接的匝道"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 149,
+                "value": 149
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:14:24.419",
+        "loc": [
+            41.374387648706524,
+            2.1481634692780602
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:47:21.894",
+        "loc": [
+            41.3765520065779,
+            2.098281610801621
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 6,
+                "value": "SPL30"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:29:45.860",
+        "loc": [
+            41.34423924850315,
+            2.1078349667713563
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:31:38.418",
+        "loc": [
+            41.341634064601145,
+            2.103216036475803
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 12,
+                "value": "SPL60"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:34:25.518",
+        "loc": [
+            41.34336484533174,
+            2.094818342571328
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 14,
+                "value": "SPL70"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 1,
+                "value": "高速和高速连接的匝道"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 135,
+                "value": 135
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:24:41.818",
+        "loc": [
+            41.353925162574306,
+            2.121143251629082
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:52:26.637",
+        "loc": [
+            41.374131597140256,
+            2.118128604352987
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 6,
+                "value": "SPL30"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 4,
+                "value": "Unknown"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:23:11.173",
+        "loc": [
+            41.3568248658459,
+            2.124933170186652
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:36:57.515",
+        "loc": [
+            41.3493491297177,
+            2.092319235067758
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:16:56.521",
+        "loc": [
+            41.368298395128285,
+            2.140185488724769
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:53:13.004",
+        "loc": [
+            41.37492346900836,
+            2.1169991359922817
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 6,
+                "value": "SPL30"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 4,
+                "value": "Unknown"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:26:05.367",
+        "loc": [
+            41.3513593995775,
+            2.1175698145606576
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:51:30.911",
+        "loc": [
+            41.3754815387993,
+            2.1190506469045207
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 6,
+                "value": "SPL30"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 4,
+                "value": "Unknown"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:30:17.920",
+        "loc": [
+            41.34312388249251,
+            2.106364390377122
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:13:59.658",
+        "loc": [
+            41.375248143478615,
+            2.14859645991024
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 8,
+                "value": "SPL40"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:36:57.515",
+        "loc": [
+            41.3493491297177,
+            2.092319235067758
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:21:33.919",
+        "loc": [
+            41.359900852754784,
+            2.1290489017339604
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:35:43.572",
+        "loc": [
+            41.3463238469745,
+            2.093168892185567
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 14,
+                "value": "SPL70"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:48:05.416",
+        "loc": [
+            41.376415183591796,
+            2.1006833560953617
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 6,
+                "value": "SPL30"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:31:10.481",
+        "loc": [
+            41.34204642083862,
+            2.1043279582766163
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 12,
+                "value": "SPL60"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:07:42.781",
+        "loc": [
+            41.391263890940394,
+            2.1436629426294695
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:45:56.051",
+        "loc": [
+            41.375536385721524,
+            2.0956844658879272
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 3,
+                "value": "Residential roads and extra-urban roads with low traffic volume"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:04:52.370",
+        "loc": [
+            41.39435,
+            2.149
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 31,
+                "value": " Invalid 无效"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 0,
+                "value": " Invalid无效"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 255,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 2,
+                "value": "MPH"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 4,
+                "value": "VehicleOffRoad"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:21:18.152",
+        "loc": [
+            41.360406982763045,
+            2.129704468223939
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:14:03.817",
+        "loc": [
+            41.37510687544174,
+            2.148513810499285
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 8,
+                "value": "SPL40"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:18:22.347",
+        "loc": [
+            41.36609523765289,
+            2.136994099791117
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 10,
+                "value": "SPL50"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 1,
+                "value": "Implicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:26:04.346",
+        "loc": [
+            41.35138971917477,
+            2.11761946824312
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:42:37.228",
+        "loc": [
+            41.365208202118865,
+            2.089950964183029
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 16,
+                "value": "SPL80"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 1,
+                "value": "Highways and expressways"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    },
+    {
+        "timestamp": "2022-11-22 10:30:32.318",
+        "loc": [
+            41.34281897074705,
+            2.105821115871253
+        ],
+        "details": [
+            {
+                "sign_name": "Speedlimit_S 当前道路限速",
+                "key": 12,
+                "value": "SPL60"
+            },
+            {
+                "sign_name": "TimeConditionSignUsed Speedlimit_S是否使用了时间条件限速。",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "TimeConditionSignExist ",
+                "key": 2,
+                "value": " False"
+            },
+            {
+                "sign_name": "NextRamp 高速前方的下一个分叉是否为匝道",
+                "key": 0,
+                "value": "Invalid无效"
+            },
+            {
+                "sign_name": "RampOffset 高速前方匝道和当前车辆的距离",
+                "key": 8191,
+                "value": "Invalid"
+            },
+            {
+                "sign_name": "Speedlimit_Type 当前道路限速种类",
+                "key": 2,
+                "value": "Explicit"
+            },
+            {
+                "sign_name": "Speedlimit_Rain 雨条件限速",
+                "key": 0,
+                "value": "无雨条件限速"
+            },
+            {
+                "sign_name": "Speedlimit_Snow ",
+                "key": 0,
+                "value": "无雪条件限速"
+            },
+            {
+                "sign_name": "Roadtype_S ",
+                "key": 2,
+                "value": "Major arteria and secondary roads"
+            },
+            {
+                "sign_name": "CountryCode_S 国家代码",
+                "key": 197,
+                "value": "SPAIN"
+            },
+            {
+                "sign_name": "Map_SpeedLimit_Unit 道路限速单位",
+                "key": 1,
+                "value": "Km/h"
+            },
+            {
+                "sign_name": "Map_Status ISA地图状态",
+                "key": 1,
+                "value": "Active"
+            }
+        ]
+    }
+]
