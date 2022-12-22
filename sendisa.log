@@ -1,12 +1,12 @@
 2022-11-22 10:04:28.717 [main] INFO  ISASendLogger - [sendIsaDataToAdas][Before]RoadStatus(vehicleOffset=-2147483648, metadata=Metadata(countryCode=-1, speedUnit=0, mapStatus=2), current=[], next=[], positionMessage=null)
-2022-11-22 10:04:28.724 [SendIsaDataToAdasPool] INFO  ISASendLogger - [sendIsaDataToAdas]result:0,sendData:[31, 2, 2, 0, 8191, 0, 0, 0, 0, 255, 1, 2]
+2022-11-22 10:04:28.724 [SendIsaDataToAdasPool] INFO  ISASendLogger - [sendIsaDataToAdas]result:0,sendData:[31, 3, 2, 0, 8191, 0, 0, 0, 0, 255, 1, 2]
 2022-11-22 10:04:35.752 [main] INFO  ISASendLogger - [sendIsaDataToAdas][Before]RoadStatus(vehicleOffset=-2147483648, metadata=Metadata(countryCode=-1, speedUnit=0, mapStatus=1), current=[], next=[], positionMessage=null)
 2022-11-22 10:04:35.761 [SendIsaDataToAdasPool] INFO  ISASendLogger - [sendIsaDataToAdas]result:0,sendData:[31, 2, 2, 0, 8191, 0, 0, 0, 0, 255, 1, 1]
 2022-11-22 10:04:35.802 [Thread-8] INFO  ISASendLogger - [MMFeedback] location map matched from EHP: (41.39435, 2.149)
 2022-11-22 10:04:36.823 [Thread-8] INFO  ISASendLogger - [MMFeedback] location map matched from EHP: (41.39435, 2.149)
 2022-11-22 10:04:37.314 [Thread-9] INFO  ISASendLogger - [sendIsaDataToAdas][Before]RoadStatus(vehicleOffset=0, metadata=Metadata(countryCode=-1, speedUnit=1, mapStatus=4), current=[], next=[], positionMessage=4611406751053512702)
 2022-11-22 10:04:37.317 [Thread-9] INFO  ISASendLogger - [sendIsaDataToAdas][Before]RoadStatus(vehicleOffset=0, metadata=Metadata(countryCode=-1, speedUnit=1, mapStatus=4), current=[], next=[], positionMessage=4611477119797690366)
-2022-11-22 10:04:37.319 [SendIsaDataToAdasPool] INFO  ISASendLogger - [sendIsaDataToAdas]result:0,sendData:[31, 2, 2, 0, 8191, 0, 0, 0, 0, 255, 2, 4]
+2022-11-22 10:04:37.319 [SendIsaDataToAdasPool] INFO  ISASendLogger - [sendIsaDataToAdas]result:0,sendData:[31, 4, 2, 0, 8191, 0, 0, 0, 0, 255, 2, 4]
 2022-11-22 10:04:37.329 [SendIsaDataToAdasPool] INFO  ISASendLogger - [sendIsaDataToAdas]result:0,sendData:[31, 2, 2, 0, 8191, 0, 0, 0, 0, 255, 2, 4]
 2022-11-22 10:04:37.852 [Thread-8] INFO  ISASendLogger - [MMFeedback] location map matched from EHP: (41.39435, 2.149)
 2022-11-22 10:04:37.852 [Thread-9] INFO  ISASendLogger - [sendIsaDataToAdas][Before]RoadStatus(vehicleOffset=0, metadata=Metadata(countryCode=-1, speedUnit=1, mapStatus=4), current=[], next=[], positionMessage=4611477119797690366)
