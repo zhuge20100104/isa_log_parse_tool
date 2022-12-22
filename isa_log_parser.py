@@ -3,6 +3,7 @@ import os
 import sys 
 import queue
 import json
+import re
 import random
 from collections import namedtuple
 import pandas as pd
@@ -49,19 +50,25 @@ class LogFileParser(object):
         return send_data_list, loc_and_data_list
 
     def parse_send_data_s(self, send_data_s):
-        '''2022-11-22 10:04:28.724 [SendIsaDataToAdasPool] INFO  ISASendLogger - [sendIsaDataToAdas]result:0,sendData:[31, 2, 2, 0, 8191, 0, 0, 0, 0, 255, 1, 2]'''
-        time_stamp = send_data_s.split("[SendIsaDataToAdasPool]")[0]
+        '''2022-12-16 10:40:17.831 - [sendIsaDataToAdas][Before]RoadStatus(vehicleOffset=-2147483648, metadata=Metadata(countryCode=-1, speedUnit=0, mapStatus=2), current=[], next=[], positionMessage=null),sendData:[31, 2, 2, 0, 8191, 0, 0, 0, 0, 255, 1, 2],elapsedTime:58274309''' 
+        m = re.match('^\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2}\.\d{0,3}', send_data_s)
+        time_stamp = m.group(0)
         time_stamp = time_stamp.strip()
-        data = send_data_s.split("sendData:")[1]
+
+        m = re.match('.*sendData:(\[.*\])', send_data_s)
+        data = m.group(1)
         data = data.strip()
         data_js = json.loads(data)
         return SendData(time_stamp, data_js)
     
     def parse_loc_s(self, loc_s):
-        '''2022-11-22 10:04:35.802 [Thread-8] INFO  ISASendLogger - [MMFeedback] location map matched from EHP: (41.39435, 2.149)'''
-        time_stamp = loc_s.split("[Thread-")[0]
+        '''2022-12-16 10:40:26.179 - [MMFeedback] location map matched from EHP: (41.39435, 2.149)'''
+        m = re.match('^\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2}\.\d{0,3}', loc_s)
+        time_stamp = m.group(0)
         time_stamp = time_stamp.strip()
-        loc = loc_s.split("location map matched from EHP:")[1]
+
+        m = re.match(".*location map matched from EHP:.*(\(.*\)).*", loc_s)
+        loc = m.group(1)
         loc = loc.strip()  
         # (1, 1) to [1, 1] 
         loc_ele_s = "[" + loc[1:-1] + "]"    
