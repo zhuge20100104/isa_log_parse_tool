@@ -1,7 +1,7 @@
 # encoding: utf-8
 import os
 import sys 
-import queue
+# import queue
 import json
 import re
 import random
@@ -29,7 +29,7 @@ class LogFileParser(object):
     
     def parse_str(self):
         send_data_list = list()
-        loc_q = queue.Queue(-1)
+        loc_stack = list()
         loc_and_data_list = list()
 
         with open(self.log_path) as log_f:
@@ -38,13 +38,13 @@ class LogFileParser(object):
                     continue
                 if log_line.strip().find("sendData:") != -1:
                     send_data_list.append(log_line.strip())
-                    if not loc_q.empty():
-                        loc_s = loc_q.get()
+                    if len(loc_stack) > 0:
+                        loc_s = loc_stack.pop()
                         data_s = log_line.strip()
                         lds = LocDataStr(loc_s, data_s)
                         loc_and_data_list.append(lds)
                 elif log_line.strip().find("location map matched from EHP") != -1:
-                    loc_q.put(log_line.strip())
+                    loc_stack.append(log_line.strip())
         print("Send data list len: " + str(len(send_data_list)))
         print("Loc and data list len: " + str(len(loc_and_data_list)))
         return send_data_list, loc_and_data_list
@@ -347,14 +347,23 @@ class LogCompare(object):
         print("loc_size: " + str(loc_size))
         res_json = list()
         while i < LOC_SIZE:
-            loc_idx = random.randint(0, loc_size-1)
+            loc_idx = random.randint(50, loc_size-1)
             loc_ele = self.loc_and_data_ls_target[loc_idx]
             loc_js = self.make_a_loc_js(loc_ele)
             res_json.append(loc_js)
             i += 1
-
+        
+        full_json = list()
+        for ele in self.loc_and_data_ls_target:
+            loc_js = self.make_a_loc_js(ele)
+            full_json.append(loc_js)
+        
         with open("loc.json", "w") as loc_f:
             res_str = json.dumps(res_json, indent=4, ensure_ascii=False)
+            loc_f.write(res_str)
+        
+        with open("f_loc.json", "w") as loc_f:
+            res_str = json.dumps(full_json, indent=4, ensure_ascii=False)
             loc_f.write(res_str)
         
 if __name__ == '__main__':
