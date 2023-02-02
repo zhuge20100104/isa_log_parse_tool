@@ -316,7 +316,7 @@ class LogCompare(object):
             os.remove("diff.csv")
         if len(rs) != 0:
             fail_reasons.append(FailReasons.FailDataNotMatch)
-            rs.to_csv("diff.csv", encoding='utf-8')
+            rs.to_csv("diff.csv", index=False, encoding='utf-8')
         if len(fail_reasons) > 0:
             failed_msg = "Failed Reasons: "
             for fail_reason in fail_reasons:
@@ -346,8 +346,9 @@ class LogCompare(object):
         i = 0
         print("loc_size: " + str(loc_size))
         res_json = list()
+        start_random_index = (int)(loc_size / 3)
         while i < LOC_SIZE:
-            loc_idx = random.randint(50, loc_size-1)
+            loc_idx = random.randint(start_random_index, loc_size-1)
             loc_ele = self.loc_and_data_ls_target[loc_idx]
             loc_js = self.make_a_loc_js(loc_ele)
             res_json.append(loc_js)
