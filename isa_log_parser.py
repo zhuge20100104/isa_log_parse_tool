@@ -274,7 +274,7 @@ class LogParser(object):
                 detail = self.parse_key_val_pair(val, sign_value_map)
                 details_.append(detail)
             loc_and_details_list.append(LocAndSignDetails(loc_, details_))
-        return send_data_ls, loc_and_details_list
+        return send_data_ls, loc_and_details_list, loc_and_data_ls
 
 class FailReasons(object):
     FailNumNotEq = "FailNumNotEq"
@@ -289,12 +289,16 @@ class LogCompare(object):
         self.send_data_list_expect = None 
         self.loc_and_data_ls_target = None 
         self.loc_and_data_ls_expect = None
+        self.loc_and_data_ls_target_raw = None
+        self.loc_and_data_ls_expect_raw = None
     
     def get_data(self):
         log_p_target = LogParser(self.target_file, self.csv_path)
         log_p_expect = LogParser(self.expect_file, self.csv_path)
-        self.send_data_list_target, self.loc_and_data_ls_target = log_p_target.parse()
-        self.send_data_list_expect, self.loc_and_data_ls_expect = log_p_expect.parse() 
+        self.send_data_list_target, self.loc_and_data_ls_target, \
+            self.loc_and_data_ls_target_raw = log_p_target.parse()
+        self.send_data_list_expect, self.loc_and_data_ls_expect, \
+            self.loc_and_data_ls_expect_raw = log_p_expect.parse() 
 
     def compare_data_list(self):
         fail_reasons = list()
@@ -312,6 +316,7 @@ class LogCompare(object):
         print(df_res.head())
         rs = df_res[df_res["timestamp"].isna() | df_res["dst_timestamp"].isna()]
         print(rs.head())
+        print("Diff length: ", len(rs))
         if os.path.exists("diff.csv"):
             os.remove("diff.csv")
         if len(rs) != 0:
@@ -321,10 +326,75 @@ class LogCompare(object):
             failed_msg = "Failed Reasons: "
             for fail_reason in fail_reasons:
                 failed_msg += fail_reason
+                failed_msg += " "
             print(failed_msg)
             return False
         return True
 
+    def compare_loc_and_send_data(self):
+        print("Loc and send data comparison result: ")
+        fail_reasons = list()
+        print("target len: " + str(len(self.loc_and_data_ls_target_raw)))
+        print("expect len: " + str(len(self.loc_and_data_ls_expect_raw)))
+        if len(self.loc_and_data_ls_target_raw) != len(self.loc_and_data_ls_expect_raw):
+            fail_reasons.append(FailReasons.FailNumNotEq)
+        target_df_ls = list()
+        for target_ele in self.loc_and_data_ls_target_raw:
+            one_target_ls = list()
+            one_target_ls.append(target_ele.loc.timestamp)
+            one_target_ls.append(target_ele.data.timestamp)
+            one_target_ls += target_ele.loc.loc
+            one_target_ls += target_ele.data.data
+            target_df_ls.append(one_target_ls)
+        expect_df_ls = list()    
+        for expect_ele in self.loc_and_data_ls_expect_raw:
+            one_expect_ls = list()
+            one_expect_ls.append(expect_ele.loc.timestamp)
+            one_expect_ls.append(expect_ele.data.timestamp)
+            one_expect_ls += expect_ele.loc.loc
+            one_expect_ls += expect_ele.data.data
+            expect_df_ls.append(one_expect_ls)
+        
+        
+        target_df = pd.DataFrame(target_df_ls)
+        expect_df = pd.DataFrame(expect_df_ls)
+        
+        target_df.columns = ["t_loc_time", "t_data_time", "x", "y", "t1", "t2", "t3", "t4", "t5", \
+            "t6", "t7", "t8", "t9", "t10", "t11", "t12"]
+        expect_df.columns = ["e_loc_time", "e_data_time", "x", "y", "e1", "e2", "e3", "e4", "e5", \
+            "e6", "e7", "e8", "e9", "e10", "e11", "e12"]
+        
+        res_df = pd.merge(target_df, expect_df, on=["x", "y"], how="left")
+        print("Len of joined result: ", len(res_df))
+        
+        def filter_func(x):
+            res = x['t1'] != x['e1'] or x['t2'] != x['e2'] or \
+                x['t3'] != x['e3'] or x['t4'] != x['e4'] or \
+                x['t5'] != x['e5'] or \
+                x['t6'] != x['e6'] or x['t7'] != x['e7'] or \
+                x['t8'] != x['e8'] or x['t9'] != x['e9'] or \
+                x['t10'] != x['e10'] or x['t11'] != x['e11'] or \
+                      x['t12'] != x['e12']
+            return res
+        
+        filter_idx = res_df.apply(filter_func, axis=1)
+        res_df = res_df[filter_idx]
+        res_df = res_df.dropna()
+        print("Result df len:", len(res_df))
+        
+        if len(res_df) != 0:
+            fail_reasons.append(FailReasons.FailDataNotMatch)
+            res_df.to_csv("loc_and_data_diff.csv", index=False, encoding='utf-8')
+        
+        if len(fail_reasons) > 0:
+            failed_msg = "Failed Reasons: "
+            for fail_reason in fail_reasons:
+                failed_msg += fail_reason
+                failed_msg += " "
+            print(failed_msg)
+            return False
+        return True
+    
     def make_a_loc_js(self, loc_ele):
         loc = loc_ele.loc
         details = loc_ele.details
@@ -387,6 +457,8 @@ if __name__ == '__main__':
         print(err_msg)
     else:
         print("Compared successfully...")
+    
+    compare_res = log_compare.compare_loc_and_send_data()
     
     log_compare.choose_random_data()
     
