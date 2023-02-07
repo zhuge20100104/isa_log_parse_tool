@@ -7,6 +7,15 @@ import re
 import random
 from collections import namedtuple
 import pandas as pd
+from datetime import datetime
+import xml.etree.ElementTree as ET
+
+
+class CommentedTreeBuilder(ET.TreeBuilder):
+    def comment(self, data):
+        self.start(ET.Comment, {})
+        self.data(data)
+        self.end(ET.Comment)
 
 
 LOC_SIZE = 50
@@ -276,15 +285,95 @@ class LogParser(object):
             loc_and_details_list.append(LocAndSignDetails(loc_, details_))
         return send_data_ls, loc_and_details_list, loc_and_data_ls
 
+
+class QianKunLogReader(object):
+    def __init__(self, folder_path, csv_path):
+        self.folder_path = folder_path 
+        self.csv_path = csv_path
+    
+    # list log files in the current folder
+    def list_files_in_order(self, folder, folder_prefix):
+        dirs = os.listdir(folder)
+        dir_and_time = list()
+        for dir_ in dirs:
+            if dir_.startswith(folder_prefix):
+                time_str = re.match(".*\.(.*)\.", dir_).group(1)
+                dt = datetime.strptime(time_str, "%Y-%m-%d-%H-%M-%S-%f")
+                dir_and_time.append({"dir": dir_, "time": dt})
+        
+        def sort_func(dat):
+            return dat["time"]
+
+        dir_and_time.sort(key=sort_func)
+        dir_list = list()
+        for dat_ in dir_and_time:
+            dir_list.append(os.path.join(folder, dat_["dir"]))
+        return dir_list
+    
+class FolderParser(object):
+    def __init__(self, folder_path, csv_path):
+        self.folder_path = folder_path
+        self.csv_path = csv_path
+    
+    def list_files_in_order(self, folder, folder_prefix):
+        dirs = os.listdir(folder)
+        dir_and_time = list()
+        for dir_ in dirs:
+            if dir_.startswith(folder_prefix):
+                time_str = re.match(".*\[(.*)\]", dir_).group(1)
+                dt = datetime.strptime(time_str, "%Y-%m-%d %H-%M-%S-%f")
+                dir_and_time.append({"dir": dir_, "time": dt})
+        
+        def sort_func(dat):
+            return dat["time"]
+
+        dir_and_time.sort(key=sort_func)
+        dir_list = list()
+        for dat_ in dir_and_time:
+            dir_list.append(os.path.join(folder, dat_["dir"]))
+        return dir_list
+    
+    def load_nav_logs(self):
+        nav_log_folder = os.path.join(self.folder_path, "MoselLog")
+        nav_folders = self.list_files_in_order(nav_log_folder, "Nav")
+        for nav_folder in nav_folders:
+            nav_xml_path = os.path.join(nav_folder, "Navlog.xml")
+            print(nav_xml_path)
+            with open(nav_xml_path) as f:
+                file_content = f.read()
+            # Add a root node to it
+            xml_str = re.sub(r"(<\?xml[^>]+\?>)", r"\1<root>", file_content) + "</root>"
+            e_tree = ET.ElementTree(ET.fromstring(xml_str))
+            root = e_tree.getroot()
+            children = root.getchildren()
+            
+            for child in children:
+                print("A child")
+                if child.tag == 'Navigation_session':
+                    nav_loops = child.findall("Nav_loop")
+                    for nav_loop in nav_loops:
+                        fix_node = nav_loop.find("Fix")
+                        ind_node = nav_loop.find("Ind")
+                        print(fix_node.text)
+                        print(ind_node.text)
+                        
+    def load_adas_logs(self):
+        # TODO:
+        adas_log_folder = os.path.join(self.folder_path, "MoselLog")
+        adas_folders = self.list_files_in_order(adas_log_folder, "Nav")
+        adas_files_ = fold_parser.list_files_in_order("/home/fredric/log_list/log/MoselLog/sh/AdasLog/", "AdasLog")
+        print(adas_files_)
+    
 class FailReasons(object):
     FailNumNotEq = "FailNumNotEq"
     FailDataNotMatch = "FailDataNotMatch"
 
 class LogCompare(object):
-    def __init__(self, _target_file, _expect_file, _csv_path):
+    def __init__(self, _target_file, _expect_file, _csv_path, parse_way):
         self.target_file = _target_file
         self.expect_file = _expect_file
         self.csv_path = _csv_path
+        self.parse_way = parse_way
         self.send_data_list_target = None 
         self.send_data_list_expect = None 
         self.loc_and_data_ls_target = None 
@@ -293,8 +382,14 @@ class LogCompare(object):
         self.loc_and_data_ls_expect_raw = None
     
     def get_data(self):
-        log_p_target = LogParser(self.target_file, self.csv_path)
-        log_p_expect = LogParser(self.expect_file, self.csv_path)
+        
+        if self.parse_way == 'old':
+            log_p_target = LogParser(self.target_file, self.csv_path)
+            log_p_expect = LogParser(self.expect_file, self.csv_path)
+        elif self.parse_way == 'qiankun':
+            # Here: target files and expect files are both folders
+            pass
+            
         self.send_data_list_target, self.loc_and_data_ls_target, \
             self.loc_and_data_ls_target_raw = log_p_target.parse()
         self.send_data_list_expect, self.loc_and_data_ls_expect, \
@@ -436,29 +531,55 @@ class LogCompare(object):
         with open("f_loc.json", "w") as loc_f:
             res_str = json.dumps(full_json, indent=4, ensure_ascii=False)
             loc_f.write(res_str)
-        
+
+
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        print("Usage: python isa_log_parser.py {target_file} {expect_file} {csv_file_path}")
-        print("Example: python isa_log_parser.py ./sendisa.log ./sendisa1.log ./ISA地图报文申请1021.csv")
-        exit(-1)
-
-    target_file = sys.argv[1]
-    expect_file = sys.argv[2]
-    csv_path = sys.argv[3]
-
-    log_compare = LogCompare(target_file, expect_file, csv_path)
-    log_compare.get_data()
-    compare_res = log_compare.compare_data_list()
-    if not compare_res:
-        err_msg = "target file: %s is not matched with the expect file: %s" % (
-            target_file, expect_file
-        )
-        print(err_msg)
-    else:
-        print("Compared successfully...")
+    # fold_parser = FolderParser('/home/fredric/log_list/log/MoselLog', "1.csv")
+    # Get nav log dir test
+    # dirs_ = fold_parser.list_files_in_order("/home/fredric/log_list/log/MoselLog", "Nav")
+    # print(dirs_)
     
-    compare_res = log_compare.compare_loc_and_send_data()
+    # Get adas log xml list
+    # adas_files_ = fold_parser.list_files_in_order("/home/fredric/log_list/log/MoselLog/sh/AdasLog/", "AdasLog")
+    # print(adas_files_)
     
-    log_compare.choose_random_data()
+    # Get send isa log list
+    # qiankun_log_reader = QianKunLogReader("/home/fredric/log_list/log/sendisa", "sendisa")
+    # files_ = qiankun_log_reader.list_files_in_order("/home/fredric/log_list/log/sendisa", "sendisa")
+    # print(files_)
+    
+    
+    fold_parser = FolderParser('/home/fredric/log_list/log', "1.csv")
+    fold_parser.load_nav_logs()
+    
+    
+
+# if __name__ == '__main__':
+#     if len(sys.argv) != 5:
+#         print("Usage: python isa_log_parser.py {target_file} {expect_file} {csv_file_path} {way}")
+#         print("Example: python isa_log_parser.py ./sendisa.log ./sendisa1.log ./ISA地图报文申请1021.csv qiankun")
+#         print("The ways parameters include 'old/qiankun', etc.")
+#         print(": old indicates the way parse loc and senddata only from log files")
+#         print(": qiankun represents the way parse loc and senddata from navlog, adaslog and sendisa log files")
+#         exit(-1)
+
+#     target_file = sys.argv[1]
+#     expect_file = sys.argv[2]
+#     csv_path = sys.argv[3]
+#     parse_way = sys.argv[4]
+
+#     log_compare = LogCompare(target_file, expect_file, csv_path, parse_way)
+#     log_compare.get_data()
+#     compare_res = log_compare.compare_data_list()
+#     if not compare_res:
+#         err_msg = "target file: %s is not matched with the expect file: %s" % (
+#             target_file, expect_file
+#         )
+#         print(err_msg)
+#     else:
+#         print("Compared successfully...")
+    
+#     compare_res = log_compare.compare_loc_and_send_data()
+    
+#     log_compare.choose_random_data()
     
