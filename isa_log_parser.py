@@ -1,12 +1,24 @@
 # encoding: utf-8
 import os
 import sys 
-import queue
+import io
+# import queue
 import json
 import re
 import random
 from collections import namedtuple
 import pandas as pd
+from datetime import datetime
+import xml.etree.ElementTree as ET
+import time 
+from subprocess import Popen, PIPE
+
+
+class CommentedTreeBuilder(ET.TreeBuilder):
+    def comment(self, data):
+        self.start(ET.Comment, {})
+        self.data(data)
+        self.end(ET.Comment)
 
 
 LOC_SIZE = 50
@@ -29,7 +41,7 @@ class LogFileParser(object):
     
     def parse_str(self):
         send_data_list = list()
-        loc_q = queue.Queue(-1)
+        loc_stack = list()
         loc_and_data_list = list()
 
         with open(self.log_path) as log_f:
@@ -38,13 +50,13 @@ class LogFileParser(object):
                     continue
                 if log_line.strip().find("sendData:") != -1:
                     send_data_list.append(log_line.strip())
-                    if not loc_q.empty():
-                        loc_s = loc_q.get()
+                    if len(loc_stack) > 0:
+                        loc_s = loc_stack.pop()
                         data_s = log_line.strip()
                         lds = LocDataStr(loc_s, data_s)
                         loc_and_data_list.append(lds)
                 elif log_line.strip().find("location map matched from EHP") != -1:
-                    loc_q.put(log_line.strip())
+                    loc_stack.append(log_line.strip())
         print("Send data list len: " + str(len(send_data_list)))
         print("Loc and data list len: " + str(len(loc_and_data_list)))
         return send_data_list, loc_and_data_list
@@ -123,7 +135,7 @@ class CSVValueParser(object):
     def parse_sign_value_strs(self):
         sign_value_s_list = list()
         state = State.Unknown
-        with open(self.csv_path) as csv_f:
+        with io.open(self.csv_path, mode="r", encoding="utf-8") as csv_f:
             for line in csv_f:
                 if line.find(Keys.StartKey) != -1:
                     state = State.StartKey
@@ -236,6 +248,23 @@ class CSVValueParser(object):
         return self.parse_sign_value_str_to_value_map(sign_value_s_list)
 
 
+def parse_key_val_pair(val, sign_value_map):
+        val_map = sign_value_map.value_map
+        sign_name = sign_value_map.sign_name
+        exceed = sign_value_map.exceed
+        if val in val_map:
+            return Detail(sign_name, val, val_map[val])
+        else:
+            if exceed is not None: 
+                exceed_val = exceed.exceed
+                value = exceed.value
+                if val >= exceed_val:
+                    return Detail(sign_name, val, value)
+                else:
+                    return Detail(sign_name, val, "Parse_Unknown")
+            else:
+                return Detail(sign_name, val, "Parse_Unknown")
+
 class LogParser(object):
     def __init__(self, _log_path, _csv_path):
         self.log_path = _log_path
@@ -274,29 +303,116 @@ class LogParser(object):
                 detail = self.parse_key_val_pair(val, sign_value_map)
                 details_.append(detail)
             loc_and_details_list.append(LocAndSignDetails(loc_, details_))
-        return send_data_ls, loc_and_details_list
+        return send_data_ls, loc_and_details_list, loc_and_data_ls
+
 
 class FailReasons(object):
     FailNumNotEq = "FailNumNotEq"
     FailDataNotMatch = "FailDataNotMatch"
 
+class QiankunLogParser(object):
+    def __init__(self, log_folder, csv_path, parse_way):
+        self.log_folder = log_folder
+        self.csv_path = csv_path
+        self.parse_way = parse_way
+        self.log_mapping = {
+            "qiankun": 1
+        }
+
+    
+    def convert_using_isa_toolkit(self):
+        p = Popen(["java", "-jar", "ISAToolkit.jar"], stdin=PIPE, stdout=PIPE, stderr=PIPE, shell=True)
+        p.stdin.write(b"2\r\n")
+        time.sleep(1)
+        parse_way_ = self.log_mapping[self.parse_way]
+        parse_s = bytes("{}\r\n".format(parse_way_), 'utf-8')
+        p.stdin.write(parse_s)
+        time.sleep(1)
+        log_folder_s = bytes("{}\r\n".format(self.log_folder), 'utf-8')
+        p.stdin.write(log_folder_s)
+        res, err =p.communicate()
+        print(res)
+        print(err)
+        assert err == b"", "Convert to result.txt using ISA toolkit failed..."
+    
+    def parse_one_line(self, line):
+        line_g = re.match(".*mm=(.*)\|.*", line)
+        mm_gps_msg = line_g.group(1)
+
+        # MMGPS(latLon=LatLon(lat=41.3889967, lon=2.156348), adasPosition=AdasPosition(positionMessage=2309760826875068646,
+        #  canMsg=CanMsg(data=[10, 2, 2, 0, 8191, 1, 0, 0, 2, 197, 1, 1], elapsedTime=15739200))))
+        lat_lon_g = re.match(".*lat=(.*)\, lon=(.*)\).*positionMessage=(.*)\,.*data=(\[.*\]).*", mm_gps_msg)
+        lat = lat_lon_g.group(1)
+        lon = lat_lon_g.group(2)
+        pos_msg = lat_lon_g.group(3)
+        data_str = lat_lon_g.group(4)
+
+        loc_str = "[{}, {}]".format(lat, lon)
+        loc = Loc(pos_msg, json.loads(loc_str))
+        data = SendData(pos_msg, json.loads(data_str))
+        return LocData(loc, data)
+
+    def parse(self):
+        self.convert_using_isa_toolkit()
+        loc_and_data_ls = list()
+        with io.open("result.txt", mode='r', encoding="utf-8") as result_f:
+            for line in result_f.readlines():
+                # Check if sendData canMsg exist in the current record
+                if line.find("CanMsg") != -1:
+                    loc_data = self.parse_one_line(line)
+                    loc_and_data_ls.append(loc_data)
+
+        csv_parser = CSVValueParser(self.csv_path)
+        sign_value_map_list = csv_parser.parse()
+
+        loc_and_details_list = list()
+        for loc_and_data in loc_and_data_ls:
+            loc_ = loc_and_data.loc 
+            data = loc_and_data.data
+            data_ = data.data
+            details_ = list()
+            for idx, val in enumerate(data_):
+                sign_value_map = sign_value_map_list[idx]
+                detail = parse_key_val_pair(val, sign_value_map)
+                details_.append(detail)
+            loc_and_details_list.append(LocAndSignDetails(loc_, details_))
+        now_ = datetime.now()
+        suffix = now_.strftime('%Y_%m_%d_%H_%M_%S_%f')
+        renamed_result_f = "result_{}.txt".format(suffix)
+        os.rename("result.txt", renamed_result_f)
+        return None, loc_and_details_list, loc_and_data_ls
+
 class LogCompare(object):
-    def __init__(self, _target_file, _expect_file, _csv_path):
+    def __init__(self, _target_file, _expect_file, _csv_path, parse_way):
         self.target_file = _target_file
         self.expect_file = _expect_file
         self.csv_path = _csv_path
+        self.parse_way = parse_way
         self.send_data_list_target = None 
         self.send_data_list_expect = None 
         self.loc_and_data_ls_target = None 
         self.loc_and_data_ls_expect = None
+        self.loc_and_data_ls_target_raw = None
+        self.loc_and_data_ls_expect_raw = None
     
     def get_data(self):
-        log_p_target = LogParser(self.target_file, self.csv_path)
-        log_p_expect = LogParser(self.expect_file, self.csv_path)
-        self.send_data_list_target, self.loc_and_data_ls_target = log_p_target.parse()
-        self.send_data_list_expect, self.loc_and_data_ls_expect = log_p_expect.parse() 
+        
+        if self.parse_way == 'old':
+            log_p_target = LogParser(self.target_file, self.csv_path)
+            log_p_expect = LogParser(self.expect_file, self.csv_path)
+        elif self.parse_way == 'qiankun':
+            log_p_target = QiankunLogParser(self.target_file, self.csv_path, self.parse_way)
+            log_p_expect = QiankunLogParser(self.expect_file, self.csv_path, self.parse_way)
+            
+        self.send_data_list_target, self.loc_and_data_ls_target, \
+            self.loc_and_data_ls_target_raw = log_p_target.parse()
+        self.send_data_list_expect, self.loc_and_data_ls_expect, \
+            self.loc_and_data_ls_expect_raw = log_p_expect.parse() 
 
     def compare_data_list(self):
+        if self.send_data_list_expect is None or self.send_data_list_target is None:
+            print("No data get, skip the comparision process...")
+            return True
         fail_reasons = list()
         if len(self.send_data_list_expect) != len(self.send_data_list_target):
             fail_reasons.append(FailReasons.FailNumNotEq)
@@ -312,19 +428,98 @@ class LogCompare(object):
         print(df_res.head())
         rs = df_res[df_res["timestamp"].isna() | df_res["dst_timestamp"].isna()]
         print(rs.head())
+        print("Diff length: ", len(rs))
         if os.path.exists("diff.csv"):
             os.remove("diff.csv")
         if len(rs) != 0:
             fail_reasons.append(FailReasons.FailDataNotMatch)
-            rs.to_csv("diff.csv", encoding='utf-8')
+            rs.to_csv("diff.csv", index=False, encoding='utf-8')
         if len(fail_reasons) > 0:
             failed_msg = "Failed Reasons: "
             for fail_reason in fail_reasons:
                 failed_msg += fail_reason
+                failed_msg += " "
             print(failed_msg)
             return False
         return True
 
+    def compare_loc_and_send_data(self):
+        fail_reasons = list()
+        print("target len: " + str(len(self.loc_and_data_ls_target_raw)))
+        print("expect len: " + str(len(self.loc_and_data_ls_expect_raw)))
+        if len(self.loc_and_data_ls_target_raw) != len(self.loc_and_data_ls_expect_raw):
+            fail_reasons.append(FailReasons.FailNumNotEq)
+        target_df_ls = list()
+        for target_ele in self.loc_and_data_ls_target_raw:
+            one_target_ls = list()
+            one_target_ls.append(target_ele.loc.timestamp)
+            one_target_ls.append(target_ele.data.timestamp)
+            one_target_ls += target_ele.loc.loc
+            one_target_ls += target_ele.data.data
+            target_df_ls.append(one_target_ls)
+        expect_df_ls = list()    
+        for expect_ele in self.loc_and_data_ls_expect_raw:
+            one_expect_ls = list()
+            one_expect_ls.append(expect_ele.loc.timestamp)
+            one_expect_ls.append(expect_ele.data.timestamp)
+            one_expect_ls += expect_ele.loc.loc
+            one_expect_ls += expect_ele.data.data
+            expect_df_ls.append(one_expect_ls)
+        
+        target_df = pd.DataFrame(target_df_ls)
+        expect_df = pd.DataFrame(expect_df_ls)
+        
+        target_df.columns = ["t_pos_msg", "t_data_time", "x", "y", "t1", "t2", "t3", "t4", "t5", \
+            "t6", "t7", "t8", "t9", "t10", "t11", "t12"]
+        expect_df.columns = ["e_pos_msg", "e_data_time", "x", "y", "e1", "e2", "e3", "e4", "e5", \
+            "e6", "e7", "e8", "e9", "e10", "e11", "e12"]
+        
+        res_df = pd.merge(target_df, expect_df, on=["x", "y"], how="left")
+        res_df.insert(2, "loc", res_df["x"].astype(str) +", " + res_df["y"].astype(str))
+
+        print("Len of joined result: ", len(res_df))
+        
+        def filter_func(x):
+            res = x['t1'] != x['e1'] or x['t2'] != x['e2'] or \
+                x['t3'] != x['e3'] or x['t4'] != x['e4'] or \
+                x['t5'] != x['e5'] or \
+                x['t6'] != x['e6'] or x['t7'] != x['e7'] or \
+                x['t8'] != x['e8'] or x['t9'] != x['e9'] or \
+                x['t10'] != x['e10'] or x['t11'] != x['e11'] or \
+                      x['t12'] != x['e12']
+            return res
+        
+        filter_idx = res_df.apply(filter_func, axis=1)
+        res_df = res_df[filter_idx]
+
+        res_df = res_df.dropna()
+
+        def diff_func(x):
+            res = dict()
+            for i in range(1, 13):
+                target_col = 't{}'.format(i)
+                expect_col = 'e{}'.format(i)
+                if x[target_col] != x[expect_col]:
+                    res[target_col] =  x[target_col]
+                    res[expect_col] = x[expect_col]
+            return json.dumps(res)
+        res_df.insert(3, "diff", res_df.apply(diff_func, axis=1))
+        print("Result df len:", len(res_df))
+        
+        if len(res_df) != 0:
+            fail_reasons.append(FailReasons.FailDataNotMatch)
+            res_df.to_excel("loc_and_data_diff.xlsx", index=False)
+        
+        if len(fail_reasons) > 0:
+            failed_msg = "Failed Reasons: "
+            for fail_reason in fail_reasons:
+                failed_msg += fail_reason
+                failed_msg += " "
+            print(failed_msg)
+            print("Failed diff file is located at 'loc_and_data_diff.csv'")
+            return False
+        return True
+    
     def make_a_loc_js(self, loc_ele):
         loc = loc_ele.loc
         details = loc_ele.details
@@ -346,37 +541,78 @@ class LogCompare(object):
         i = 0
         print("loc_size: " + str(loc_size))
         res_json = list()
+        start_random_index = (int)(loc_size / 3)
         while i < LOC_SIZE:
-            loc_idx = random.randint(0, loc_size-1)
+            loc_idx = random.randint(start_random_index, loc_size-1)
             loc_ele = self.loc_and_data_ls_target[loc_idx]
             loc_js = self.make_a_loc_js(loc_ele)
             res_json.append(loc_js)
             i += 1
-
-        with open("loc.json", "w") as loc_f:
+        
+        full_json = list()
+        for ele in self.loc_and_data_ls_target:
+            loc_js = self.make_a_loc_js(ele)
+            full_json.append(loc_js)
+        
+        with io.open("loc.json", "w", encoding="utf-8") as loc_f:
             res_str = json.dumps(res_json, indent=4, ensure_ascii=False)
             loc_f.write(res_str)
         
+        with io.open("f_loc.json", "w", encoding="utf-8") as loc_f:
+            res_str = json.dumps(full_json, indent=4, ensure_ascii=False)
+            loc_f.write(res_str)
+
+
+class Printer(object): 
+    @staticmethod
+    def print_delimeter(title):
+        print()
+        print()
+        print("=========================================================")
+        print("=========================================================")
+        print(title)
+
+
 if __name__ == '__main__':
-    if len(sys.argv) != 4:
-        print("Usage: python isa_log_parser.py {target_file} {expect_file} {csv_file_path}")
-        print("Example: python isa_log_parser.py ./sendisa.log ./sendisa1.log ./ISA地图报文申请1021.csv")
+    if len(sys.argv) != 5:
+        print("Usage: python isa_log_parser.py {target_file} {expect_file} {csv_file_path} {way}")
+        print("Example: python isa_log_parser.py ./sendisa.log ./sendisa1.log ./ISAMapReportsReq.csv qiankun")
+        print("The ways parameters include 'old/qiankun', etc.")
+        print(": old indicates the way parse loc and senddata only from log files")
+        print(": qiankun represents the way parse loc and senddata from navlog, adaslog and sendisa log files")
         exit(-1)
 
     target_file = sys.argv[1]
     expect_file = sys.argv[2]
     csv_path = sys.argv[3]
+    parse_way = sys.argv[4]
 
-    log_compare = LogCompare(target_file, expect_file, csv_path)
+    Printer.print_delimeter("Start to extract the log data...")
+    log_compare = LogCompare(target_file, expect_file, csv_path, parse_way)
     log_compare.get_data()
-    compare_res = log_compare.compare_data_list()
+    # The old way, only compares the send data one by one, requirements raised by XinHeng, Shen
+    if parse_way == 'old':
+        Printer.print_delimeter("Perform the old pure 'Send data' comparision way...")
+        compare_res = log_compare.compare_data_list()
+        if not compare_res:
+            err_msg = "target file: %s is not matched with the expect file: %s" % (
+                target_file, expect_file
+            )
+            print(err_msg)
+        else:
+            print("Compared successfully...")
+    
+    
+    Printer.print_delimeter("Location and send data union comparison...")
+    compare_res = log_compare.compare_loc_and_send_data()
     if not compare_res:
         err_msg = "target file: %s is not matched with the expect file: %s" % (
-            target_file, expect_file
-        )
+                target_file, expect_file
+            )
         print(err_msg)
     else:
         print("Compared successfully...")
-    
+
+    Printer.print_delimeter("Start to choose randon data...")
     log_compare.choose_random_data()
     
