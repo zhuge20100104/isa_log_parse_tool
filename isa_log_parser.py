@@ -473,7 +473,15 @@ class LogCompare(object):
             "t6", "t7", "t8", "t9", "t10", "t11", "t12"]
         expect_df.columns = ["e_pos_msg", "e_data_time", "x", "y", "e1", "e2", "e3", "e4", "e5", \
             "e6", "e7", "e8", "e9", "e10", "e11", "e12"]
-        
+
+        print("Before drop target :", len(target_df))
+        print("Before drop expect :", len(expect_df))
+        target_df = target_df.drop_duplicates(['x', 'y'], keep='last')
+        expect_df = expect_df.drop_duplicates(['x', 'y'], keep='last')
+
+        print("After drop target :", len(target_df))
+        print("After drop expect :", len(expect_df))
+
         res_df = pd.merge(target_df, expect_df, on=["x", "y"], how="left")
         res_df.insert(2, "loc", res_df["x"].astype(str) +", " + res_df["y"].astype(str))
 
@@ -576,7 +584,9 @@ class Printer(object):
 if __name__ == '__main__':
     if len(sys.argv) != 5:
         print("Usage: python isa_log_parser.py {target_file} {expect_file} {csv_file_path} {way}")
-        print("Example: python isa_log_parser.py ./sendisa.log ./sendisa1.log ./ISAMapReportsReq.csv qiankun")
+        print('Example: python isa_log_parser.py "\\qadata\shqa\Qiankun\logs for comparison\22Q4_0.7.1.0003_0202_log" "\\qadata\shqa\Qiankun\logs for comparison\22Q3_0.7.1.0003_0202_log" ./ISAMapReportsReq.csv qiankun')
+        print('or for the old way:')
+        print('Example: python isa_log_parser.py .\sendisa.2023-02-02.log .\sendisa.2023-01-19.log .\ISAMapReportsReq.csv old')
         print("The ways parameters include 'old/qiankun', etc.")
         print(": old indicates the way parse loc and senddata only from log files")
         print(": qiankun represents the way parse loc and senddata from navlog, adaslog and sendisa log files")

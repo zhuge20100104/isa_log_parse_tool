@@ -5,9 +5,9 @@ from collections import namedtuple
 Speeds = namedtuple("Speeds", ["maxspeed", "maxspeed_forward", "maxspeed_backward"])
 
 url = "http://mapilot.telenav.com/maps/unidb/query_by_latlon/?point={}%2C{}&naveType=both&timestamp=1675667501000&dbhost={}&dbname={}&region={}".format(
-    41.388661400000004, 2.1070712, 
+    41.347563, 2.112250,
     "hqd-ssdpostgis-06.mypna.com", 
-    "UniDB_HERE_EU22Q1_a00d200_20220119021805_RC",
+    "UniDB_HERE_EU22Q4_034c80e_20221011181047_RC",
     "EU"
 )
 
