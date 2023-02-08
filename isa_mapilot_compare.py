@@ -1,13 +1,16 @@
-import sys 
-import io 
+import sys
 import json
 import requests
 import time
 import pandas as pd
-
+from utils.funcs import Printer
+from utils.data_saver import DataSaver
 from concurrent.futures import ThreadPoolExecutor
 
 from collections import namedtuple
+from utils.qiankun_log_parser import QiankunLogParser
+
+
 Speeds = namedtuple("Speeds", ["maxspeed", "maxspeed_forward", "maxspeed_backward"])
 SpeedResult = namedtuple("SpeedResult", ["res", "speed"])
 
@@ -56,10 +59,13 @@ class SpeedGet(object):
 
 
 class SpeedCompare(object):
-    def __init__(self, db_host, db_name, region, thread_count) :
+    def __init__(self, db_host, db_name, region, log_folder, csv_path,  parse_way, thread_count) :
         self.db_host = db_host
         self.db_name = db_name 
         self.region = region
+        self.log_folder = log_folder
+        self.csv_path = csv_path
+        self.parse_way = parse_way
         self.thread_count = thread_count
         self.speed_get = SpeedGet(self.db_host, self.db_name, self.region)
 
@@ -104,7 +110,7 @@ class SpeedCompare(object):
         a_res = dict()
         a_res['pos_msg'] = loc_and_data['timestamp']
         loc = loc_and_data['loc']
-        a_res['loc'] = loc
+        a_res['loc'] = "{},{}".format(str(loc[0]), str(loc[1]))
         speed = self.speed_get.get_speed(loc[0], loc[1])
         a_res['max_speed_forward'] = speed.maxspeed_forward
         a_res['max_speed_backward'] = speed.maxspeed_backward
@@ -118,47 +124,60 @@ class SpeedCompare(object):
     def compare(self): 
         res_list = list()
         start = time.time()
-        print("Processing ...........................................")
-        with io.open("f_loc.json", mode="r", encoding="utf-8") as f:
-            loc_and_datas = json.load(f)
-            count = int(len(loc_and_datas) / self.thread_count)
-            left_count = len(loc_and_datas) % self.thread_count
+        log_parser = QiankunLogParser(self.log_folder, self.csv_path, self.parse_way, "result_mapilot.txt")
+        
+        Printer.print_delimeter("Load data  ...........................................")
+        _, loc_and_data_ls, _ = log_parser.parse()
+        data_saver = DataSaver(loc_and_data_ls)
+        loc_and_datas = data_saver.convert_ele_to_dict()
 
-            for i in range(0, count):
-                cur_datas = loc_and_datas[i*self.thread_count: (i+1)*self.thread_count]
-                with ThreadPoolExecutor(max_workers=self.thread_count) as pool:
-                    results = pool.map(self.get_and_compare_one_data, cur_datas)
-                for result in results:
-                    if result.res is False:
-                        res_list.append(result.speed)
+        Printer.print_delimeter("Processing ...........................................")
+        count = int(len(loc_and_datas) / self.thread_count)
+        left_count = len(loc_and_datas) % self.thread_count
 
-            if left_count != 0:
-                print("handle the last batch...")
-                left_datas = loc_and_datas[count * self.thread_count:]
-                with ThreadPoolExecutor(max_workers=self.thread_count) as pool:
-                    results = pool.map(self.get_and_compare_one_data, left_datas)
-                for result in results:
-                    if result.res is False:
-                        res_list.append(result.speed)
+        for i in range(0, count):
+            cur_datas = loc_and_datas[i*self.thread_count: (i+1)*self.thread_count]
+            with ThreadPoolExecutor(max_workers=self.thread_count) as pool:
+                results = pool.map(self.get_and_compare_one_data, cur_datas)
+            for result in results:
+                if result.res is False:
+                    res_list.append(result.speed)
+
+        if left_count != 0:
+            print("handle the last batch...")
+            left_datas = loc_and_datas[count * self.thread_count:]
+            with ThreadPoolExecutor(max_workers=self.thread_count) as pool:
+                results = pool.map(self.get_and_compare_one_data, left_datas)
+            for result in results:
+                if result.res is False:
+                    res_list.append(result.speed)
+
         end = time.time()
         print("Process time", (end-start), " s")
         print("Wrong result list len: ", len(res_list))
 
         res_diff_df = pd.DataFrame(res_list, columns=["pos_msg", "loc", "max_speed_forward", "max_speed_backward", "max_speed", "cur_speed"])
-        res_diff_df.to_excel("mapilot_compare_result.xlsx", index=False)
-        print("Result was saved to: mapilot_compare_result.xlsx")
+        res_path = "mapilot_compare_result.xlsx"
+        res_diff_df.to_excel(res_path, index=False)
+        
+        prompt_str = "Result was saved to: {}".format(res_path)
+        print(prompt_str)
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 5:
-        print("Usage: python isa_mapilot_compare.py  {dbhost} {dbname} {region} {thread_count}")
-        print("Example: python isa_mapilot_compare.py  hqd-ssdpostgis-06.mypna.com UniDB_HERE_EU22Q4_034c80e_20221011181047_RC EU 100")
+    if len(sys.argv) != 8:
+        print("Usage: python isa_mapilot_compare.py  {dbhost} {dbname} {region} {log_folder} {csv_path} {parse_way} {thread_count}")
+        print('Example: python isa_mapilot_compare.py hqd-ssdpostgis-06.mypna.com UniDB_HERE_EU22Q4_034c80e_20221011181047_RC EU "\\qadata\shqa\Qiankun\logs for comparison\22Q4_0.7.1.0003_0202_log" ./ISAMapReportsReq.csv qiankun 100')
         exit(0)
     
     db_host = sys.argv[1]
     db_name = sys.argv[2]
     db_region = sys.argv[3]
-    thread_count = int(sys.argv[4])
-    sc = SpeedCompare(db_host, db_name, db_region, thread_count)
+    log_foler = sys.argv[4]
+    csv_path = sys.argv[5]
+    parse_way = sys.argv[6]
+    thread_count = int(sys.argv[7])
+
+    sc = SpeedCompare(db_host, db_name, db_region, log_foler, csv_path, parse_way, thread_count)
     sc.compare()
 

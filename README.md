@@ -5,9 +5,7 @@
 
   该工具分为两个脚本，一个是负责对比新的日志和老的日志的区别的，名为[isa_log_parser.py]。第一个脚本的输出结果为 [loc_and_data_diff.xlsx]。
 
-  另一个是负责 使用 第一个脚本 输出的结果[f_loc.json]， 使用mapilot接口获取maxspeed,并和log日志中的maxspeed进行对比的，名为 isa_mapilot_compare.py。第二个脚本的输出结果为[mapilot_compare_result.xlsx]。
-
-  必须先运行 [isa_log_parser.py]，生成对应的中间产物[f_loc.json]，才能接着运行[isa_mapilot_compare.py]，进行逐一比较。
+  另一个脚本 使用mapilot接口获取maxspeed,并和log日志中的maxspeed进行对比，名为 [isa_mapilot_compare.py]。第二个脚本的输出结果为[mapilot_compare_result.xlsx]。
 
 ### 前提
   本工程依赖于开发的ISAToolkit.jar包，并且只能在Windows平台运行。
@@ -50,17 +48,20 @@
 
 ### isa_mapilot_compare.py用法
 
-  python isa_mapilot_compare.py  {dbhost} {dbname} {region} {thread_count}
+  python isa_mapilot_compare.py  {dbhost} {dbname} {region} {log_folder} {csv_path} {parse_way} {thread_count}
 
   - dbhost: 数据库host地址
   - dbname: 数据库名
   - region: 区域
+  - log_folder: 需要对比的log folder， 例如 "\\qadata\shqa\Qiankun\logs for comparison\22Q4_0.7.1.0003_0202_log"  
+  - csv_path: ISA报文对应的csv文件,最好保存成一个英文名的csv名字。
+  - parse_way: 解析日志的方法，一共有两种，用于扩展的。一种是old，一种是qiankun，推荐使用qiankun即可。
   - thread_count: 开启多少个线程进行服务端数据抓取，因为服务端服务器的吞吐量限制，大于一定数量时会出现SQL数据库查询错误。推荐值为100。
 
   示例用法
 
   ```shell
-    python isa_mapilot_compare.py  hqd-ssdpostgis-06.mypna.com UniDB_HERE_EU22Q4_034c80e_20221011181047_RC EU 100
+     python isa_mapilot_compare.py hqd-ssdpostgis-06.mypna.com UniDB_HERE_EU22Q4_034c80e_20221011181047_RC EU "\\qadata\shqa\Qiankun\logs for comparison\22Q4_0.7.1.0003_0202_log" ./ISAMapReportsReq.csv qiankun 50
   ```
 
   运行此脚本之后会输出[mapilot_compare_result.xlsx]。就是对应的数据点的当前速度与mapilot接口中返回的速度的一个对比。
