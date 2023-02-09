@@ -77,5 +77,7 @@ class QiankunLogParser(object):
                 details_.append(detail)
             loc_and_details_list.append(LocAndSignDetails(loc_, details_))
         
+        if os.path.exists(self.result_path):
+            os.remove(self.result_path)
         os.rename("result.txt", self.result_path)
         return None, loc_and_details_list, loc_and_data_ls
