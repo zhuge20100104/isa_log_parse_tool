@@ -127,7 +127,19 @@ class SpeedCompare(object):
         log_parser = QiankunLogParser(self.log_folder, self.csv_path, self.parse_way, "result_mapilot.txt")
         
         Printer.print_delimeter("Load data  ...........................................")
-        _, loc_and_data_ls, _ = log_parser.parse()
+        raw_data = log_parser.parse_to_raw_data()
+
+        print("data before filtered: ", str(len(raw_data)))
+
+        filtered_data = list()
+        for single_data in raw_data:
+            cur_data = single_data.data.data
+            if isinstance(cur_data, list) and cur_data[-1:][0] != 4:
+                filtered_data.append(single_data)
+
+        print("data after filtered: ", str(len(filtered_data)))
+        _, loc_and_data_ls, _ = log_parser.parse_to_final_data(filtered_data)
+          
         data_saver = DataSaver(loc_and_data_ls)
         loc_and_datas = data_saver.convert_ele_to_dict()
 

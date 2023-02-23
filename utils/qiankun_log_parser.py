@@ -52,7 +52,7 @@ class QiankunLogParser(object):
         data = SendData(pos_msg, json.loads(data_str))
         return LocData(loc, data)
 
-    def parse(self):
+    def parse_to_raw_data(self):
         self.convert_using_isa_toolkit()
         loc_and_data_ls = list()
         with io.open("result.txt", mode='r', encoding="utf-8") as result_f:
@@ -61,7 +61,9 @@ class QiankunLogParser(object):
                 if line.find("CanMsg") != -1:
                     loc_data = self.parse_one_line(line)
                     loc_and_data_ls.append(loc_data)
-
+        return loc_and_data_ls
+    
+    def parse_to_final_data(self, loc_and_data_ls):
         csv_parser = CSVValueParser(self.csv_path)
         sign_value_map_list = csv_parser.parse()
 
@@ -81,3 +83,10 @@ class QiankunLogParser(object):
             os.remove(self.result_path)
         os.rename("result.txt", self.result_path)
         return None, loc_and_details_list, loc_and_data_ls
+
+
+    def parse(self):
+        loc_and_data_ls = self.parse_to_raw_data()
+        return self.parse_to_final_data(loc_and_data_ls)
+
+       
